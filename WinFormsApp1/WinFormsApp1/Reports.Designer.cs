@@ -65,6 +65,7 @@
             InstructorCoursesButton.TabIndex = 1;
             InstructorCoursesButton.Text = "Show Instructor Courses";
             InstructorCoursesButton.UseVisualStyleBackColor = false;
+            InstructorCoursesButton.Click += InstructorCoursesButton_Click;
             // 
             // StudentGradesButton
             // 
@@ -79,6 +80,7 @@
             StudentGradesButton.TabIndex = 1;
             StudentGradesButton.Text = "Show Student Grades";
             StudentGradesButton.UseVisualStyleBackColor = false;
+            StudentGradesButton.Click += StudentGradesButton_Click;
             // 
             // ChooseReportLabel
             // 
@@ -105,6 +107,7 @@
             ShowStudentAnswersButton.TabIndex = 1;
             ShowStudentAnswersButton.Text = "Show Student Answers";
             ShowStudentAnswersButton.UseVisualStyleBackColor = false;
+            ShowStudentAnswersButton.Click += ShowStudentAnswersButton_Click;
             // 
             // ShowDepartmentStudentsButton
             // 
@@ -134,6 +137,7 @@
             CourseTopicsButton.TabIndex = 38;
             CourseTopicsButton.Text = "Show Course Topics";
             CourseTopicsButton.UseVisualStyleBackColor = false;
+            CourseTopicsButton.Click += CourseTopicsButton_Click;
             // 
             // BackButton
             // 

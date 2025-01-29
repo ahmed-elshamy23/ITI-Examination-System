@@ -34,6 +34,7 @@
             sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             label1 = new Label();
             PanelQuestion = new Panel();
+            GeneratePdfButton = new Button();
             SuspendLayout();
             // 
             // Exam
@@ -41,7 +42,7 @@
             Exam.AutoSize = true;
             Exam.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Exam.ForeColor = Color.Red;
-            Exam.Location = new Point(208, 9);
+            Exam.Location = new Point(416, 16);
             Exam.Name = "Exam";
             Exam.Size = new Size(125, 31);
             Exam.TabIndex = 0;
@@ -52,7 +53,7 @@
             Course.AutoSize = true;
             Course.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Course.ForeColor = Color.Red;
-            Course.Location = new Point(450, 9);
+            Course.Location = new Point(704, 16);
             Course.Name = "Course";
             Course.Size = new Size(84, 31);
             Course.TabIndex = 1;
@@ -88,14 +89,30 @@
             // 
             PanelQuestion.Location = new Point(18, 85);
             PanelQuestion.Name = "PanelQuestion";
-            PanelQuestion.Size = new Size(798, 555);
+            PanelQuestion.Size = new Size(1238, 555);
             PanelQuestion.TabIndex = 41;
+            // 
+            // GeneratePdfButton
+            // 
+            GeneratePdfButton.BackColor = Color.FromArgb(154, 51, 51);
+            GeneratePdfButton.Cursor = Cursors.Hand;
+            GeneratePdfButton.FlatStyle = FlatStyle.Flat;
+            GeneratePdfButton.ForeColor = Color.White;
+            GeneratePdfButton.Location = new Point(1080, 24);
+            GeneratePdfButton.Margin = new Padding(3, 4, 3, 4);
+            GeneratePdfButton.Name = "GeneratePdfButton";
+            GeneratePdfButton.Size = new Size(170, 43);
+            GeneratePdfButton.TabIndex = 49;
+            GeneratePdfButton.Text = "Generate PDF";
+            GeneratePdfButton.UseVisualStyleBackColor = false;
+            GeneratePdfButton.Click += GeneratePdfButton_Click;
             // 
             // ShowExam
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(839, 660);
+            ClientSize = new Size(1279, 704);
+            Controls.Add(GeneratePdfButton);
             Controls.Add(PanelQuestion);
             Controls.Add(label1);
             Controls.Add(Back);
@@ -118,5 +135,6 @@
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
         private Label label1;
         private Panel PanelQuestion;
+        private Button GeneratePdfButton;
     }
 }

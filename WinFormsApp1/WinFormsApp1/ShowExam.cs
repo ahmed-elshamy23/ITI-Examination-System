@@ -44,7 +44,7 @@ namespace WinFormsApp1
 
 			int previousLocation = 0;
 			int previousGroup = 0;
-			
+
 			for (int i = 0; i < exams.Count; i++)
 			{
 				var questionGroupBox = new Panel
@@ -183,6 +183,11 @@ namespace WinFormsApp1
 			var examSelection = new ExamSelection(connection);
 			examSelection.ShowDialog();
 			Close();
+		}
+
+		private void GeneratePdfButton_Click(object sender, EventArgs e)
+		{
+			GeneratePdf.GenerateFromQuestions($"Questions of {Exam.Text} in {Course.Text} Course", exams);
 		}
 	}
 }

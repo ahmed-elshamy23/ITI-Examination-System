@@ -1,6 +1,3 @@
-using Microsoft.Data.SqlClient;
-using System.Configuration;
-
 namespace WinFormsApp1
 {
 	internal static class Program
@@ -8,7 +5,7 @@ namespace WinFormsApp1
 		[STAThread]
 		static void Main()
 		{
-            ApplicationConfiguration.Initialize();
+			ApplicationConfiguration.Initialize();
 			Application.Run(new Login());
 		}
 	}

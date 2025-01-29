@@ -25,7 +25,6 @@ namespace WinFormsApp1
 				typeof(Exam),
 				(type, columnName) => type.GetProperties().FirstOrDefault(prop => prop.Name.Replace(" ", "") == columnName.Replace(" ", ""))
 			));
-            //CourseBox.DataSource = allStudentExams.Select(x => x.Course).Distinct().ToList();
             foreach (var course in allStudentExams)
             {
                 if (!CourseBox.Items.Contains(course.Course))
@@ -100,11 +99,6 @@ namespace WinFormsApp1
                     }
                 }
             }
-            //var parameters = new DynamicParameters();
-            //parameters.Add("@sid", studentId, DbType.Int32);
-            //parameters.Add("@eid", examId, DbType.Int32);
-            //parameters.Add("@questionsWithAnswers", submittedAnswers.AsTableValuedParameter("questionAndAnswer"));
-            //return connection.Query<int>("Exams.saveExamAnswers", parameters, commandType: CommandType.StoredProcedure).First();
         }
 
         private void UpdatePanel()
